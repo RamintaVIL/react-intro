@@ -1,0 +1,27 @@
+import './Header.css';
+import logo from '/vite.svg';
+
+export function Header() {
+    return (
+        <header className="mainHeader">
+            <img className="logo" src={logo} alt="Logo" />
+            <nav className="nav">
+                <a className="link" href="#">
+                    Guide
+                </a>
+                <a className="link" href="#">
+                    Confi
+                </a>
+                <a className="link" href="#">
+                    Plugins
+                </a>
+                <a className="link" href="#">
+                    Resources
+                </a>
+                <a className="link" href="#">
+                    Version
+                </a>
+            </nav>
+        </header>
+    );
+}

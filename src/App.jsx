@@ -1,7 +1,21 @@
-import './App.css'
+import { Features } from './components/features/Features';
+import { Footer } from './components/footer/Footer';
+import { Header } from './components/header/Header';
+import { Hero } from './components/hero/Hero';
+import { Sponsor } from './components/sponsor/Sponsor';
 
 function App() {
-  return <h1>Labas rytas, Lietuva</h1>; 
+    return (
+        <>
+            <Header />
+            <main>
+                <Hero />
+                <Features />
+                <Sponsor />
+            </main>
+            <Footer />
+        </>
+    );
 }
 
 export default App;
