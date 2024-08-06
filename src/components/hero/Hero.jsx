@@ -1,4 +1,4 @@
-import './Hero.css';
+import style from './Hero.module.css';
 import logo from '/vite.svg';
 
 export function Hero() {
@@ -12,24 +12,24 @@ export function Hero() {
             : 'Finito!!!';
 
     return (
-        <section className="hero">
-            <div className="textContent">
-                <h1 className="title">{title}</h1>
-                <p className=" description">
+        <section className={style.hero}>
+            <div className={style.textContent}>
+                <h1 className={style.title}>{title}</h1>
+                <p className={style.description}>
                     Get ready for a development environment that can finally
                     catch up with you.
                 </p>
-                <div className="btnList">
-                    <a className="btn" href="#">
+                <div className={style.btnList}>
+                    <a className={style.btn} href="#">
                         Get started
                     </a>
-                    <a className="btn" href="#">
+                    <a className={style.btn} href="#">
                         Why Vite?
                     </a>
-                    <a className="btn" href="#">
+                    <a className={style.btn} href="#">
                         View on Github
                     </a>
-                    <a className="btn" href="#">
+                    <a className={style.btn} href="#">
                         ⚡️ ViteConf 24
                     </a>
                 </div>
