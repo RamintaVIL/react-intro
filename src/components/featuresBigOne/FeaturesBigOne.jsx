@@ -1,25 +1,57 @@
 import style from './FeaturesBigOne.module.css';
 
-export function FeaturesBigOne() {
-    const blocks = [];
-    for (let i = 0; i < 6; i++) {
-        blocks.push(
-            <div className={style.feature}>
-                <div className={style.icon}>💡</div>
-                <h2 className={style.title}>Instant Server Start</h2>
-                <p className={style.description}>
-                    On demand file serving over native ESM, no bundling
-                    required!
-                </p>
-            </div>
-        );
-    }
-
+export function FeaturesBigOne(params) {
+    // galima ir iskarti, kad gamintu masyva ir grazintu
     return (
         <section className={style.featuresList}>
-            {blocks}
+            {params.data.map((item, index) => (
+                <div key={index} className={style.feature}>
+                    <div className={style.icon}>{item.icon}</div>
+                    <h2 className={style.title}>{item.title}</h2>
+                    <p className={style.description}>{item.description}</p>
+                </div>
+            ))}
+        </section>
+    );
+}
 
-            {/* <div className={style.feature}>
+// const blocks = [];
+// for (const item of params.data) {
+//     blocks.push(
+//         <div className={style.feature}>
+//             <div className={style.icon}>{item.icon}</div>
+//             <h2 className={style.title}>{item.title}</h2>
+//             <p className={style.description}>{item.description}</p>
+//         </div>
+//     );
+// }
+
+// galime ir taip pasirasyti. Turime tuscia masyva ir supushiname i masyva.
+// for (let i = 0; i < data.length; i++) {
+//          blocks.push(
+//         <div className={style.feature}>
+//             <div className={style.icon}>{item.icon}</div>
+//             <h2 className={style.title}>{item.title}</h2>
+//             <p className={style.description}>{item.description}</p>
+//         </div>
+//     );
+// }
+
+// kitas uzrasymo budas, is karto gamina objektu masyva.
+// const blocks = params.data.map(item => (
+//   <div className={style.feature}>
+//             <div className={style.icon}>{item.icon}</div>
+//             <h2 className={style.title}>{item.title}</h2>
+//             <p className={style.description}>{item.description}</p>
+//   </div>
+// )),
+
+// return (
+//     <section className={style.featuresList}>
+//         {blocks}
+
+// {
+/* <div className={style.feature}>
                 <div className={style.icon}>⚡️</div>
                 <h2 className={style.title}>Lightning Fast HMR</h2>
                 <p className={style.description}>
@@ -56,7 +88,9 @@ export function FeaturesBigOne() {
                 <p className={style.description}>
                     Flexible programmatic APIs with full TypeScript typing.
                 </p>
-            </div> */}
-        </section>
+            </div> */
+// }
+// {
+/* </section>
     );
-}
+} */

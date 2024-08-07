@@ -4,6 +4,7 @@ import { Footer } from './components/footer/Footer';
 import { Header } from './components/header/Header';
 import { Hero } from './components/hero/Hero';
 import { Sponsor } from './components/sponsor/Sponsor';
+import { sixFeatures } from './data/sixFeatures';
 
 function App() {
     return (
@@ -12,7 +13,7 @@ function App() {
             <main>
                 <Hero />
                 <Features />
-                <FeaturesBigOne />
+                <FeaturesBigOne data={sixFeatures} />
                 <Sponsor />
             </main>
             <Footer />
