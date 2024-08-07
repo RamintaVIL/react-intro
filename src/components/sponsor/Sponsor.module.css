@@ -1,0 +1,17 @@
+.btn {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    line-height: 1em;
+    font-size: 1.1rem;
+    background-color: antiquewhite;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.3em;
+}
+
+.sponsors {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 2rem;
+}
