@@ -1,14 +1,11 @@
+import { Button } from '../button/Button';
 import style from './Sponsor.module.css';
 
 export function Sponsor() {
     return (
         <section className={style.sponsors}>
-            <a className={style.btn} href="#">
-                Sponsor Vite
-            </a>
-            <a className={style.btn} href="#">
-                Sponser WHO?
-            </a>
+            <Button url="#" text="Sponsor Vite" />
+            <Button url="#" text="Sponser WHO?" />
         </section>
     );
 }

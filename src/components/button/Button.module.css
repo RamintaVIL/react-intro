@@ -1,0 +1,9 @@
+.btn {
+    background-color: antiquewhite;
+    color: black;
+    padding: 0.8em 1.5em;
+    line-height: 1em;
+    font-size: 1.1rem;
+    border-radius: 1.3em;
+    text-decoration: none;
+}
