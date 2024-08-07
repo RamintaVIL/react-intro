@@ -1,8 +1,9 @@
 import style from './FeaturesBigOne.module.css';
 
-export function Features() {
-    return (
-        <section className={style.featuresList}>
+export function FeaturesBigOne() {
+    const blocks = [];
+    for (let i = 0; i < 6; i++) {
+        blocks.push(
             <div className={style.feature}>
                 <div className={style.icon}>💡</div>
                 <h2 className={style.title}>Instant Server Start</h2>
@@ -11,7 +12,14 @@ export function Features() {
                     required!
                 </p>
             </div>
-            <div className={style.feature}>
+        );
+    }
+
+    return (
+        <section className={style.featuresList}>
+            {blocks}
+
+            {/* <div className={style.feature}>
                 <div className={style.icon}>⚡️</div>
                 <h2 className={style.title}>Lightning Fast HMR</h2>
                 <p className={style.description}>
@@ -48,7 +56,7 @@ export function Features() {
                 <p className={style.description}>
                     Flexible programmatic APIs with full TypeScript typing.
                 </p>
-            </div>
+            </div> */}
         </section>
     );
 }
