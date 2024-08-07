@@ -1,7 +1,6 @@
-import { Feature } from './Feature';
 import style from './Features.module.css';
 
-export function Features() {
+export function FeaturesBigOne() {
     return (
         <section className={style.featuresList}>
             <Feature
